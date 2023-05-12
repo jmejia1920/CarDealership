@@ -10,7 +10,13 @@ public class Dealership {
 
     private ArrayList<Vehicle> inventory;
 
-    private List<Vehicle> getVehiclesPrice(Double min,Double max){
+    public Dealership(String name, String address, String phone) {
+        this.name = name;
+        this.address = address;
+        this.phone = phone;
+    }
+
+    private List<Vehicle> getVehiclesPrice(Double min, Double max){
         return null;
     }
     private void addVehicle(Vehicle vehicle){
@@ -31,5 +37,18 @@ public class Dealership {
     private List<Vehicle> getVehiclesByType(String vehicleType){
         return null;
     }
+    private List<Vehicle> getAllVehicles(){
+        int numVehicles  = 4;
+        for(int i=0; i<numVehicles; i++);
+
+        return null;
+    }
+    private List<Vehicle> addVehicle(String vehicle){
+        return null;
+    }
+    private List<Vehicle> removeVehicle(String vehicle){
+        return null;
+    }
+
 
 }
