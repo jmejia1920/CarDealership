@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class DealershipFileManager {
     private static final String File_Name = "dealership.csv";
-    private static ArrayList<Vehicle> vehicles = new ArrayList<>();
+    public static ArrayList<Vehicle> vehicles = new ArrayList<>();
 
     public static void getDealerships(String fileName) throws IOException {
         try{
