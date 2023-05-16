@@ -10,12 +10,18 @@ import java.util.ArrayList;
 public class DealershipFileManager {
     private static final String File_Name = "dealership.csv";
     public static ArrayList<Vehicle> vehicles = new ArrayList<>();
+    public static ArrayList<Dealership> dealerships = new ArrayList<>();
 
-    public static void getDealerships(String fileName) throws IOException {
+    public static void vehicleInventory(String fileName) throws IOException {
         try{
         BufferedReader reader = new BufferedReader(new FileReader(fileName));
         String line = "";
+        boolean isFirstLine= true;
         while((line = reader.readLine()) != null){
+            if(isFirstLine){
+                isFirstLine= false;
+                continue;
+            }
             String[] parts = line.split("\\|");
             int vin  = Integer.parseInt(parts[0]);
             int year = Integer.parseInt(parts[1]);
@@ -30,6 +36,23 @@ public class DealershipFileManager {
             reader.close();
         } catch (IOException e) {
             System.out.println("Sorry something went wrong.");
+        }
+        }
+        public static void getDealership(String fileName){
+        try{
+            BufferedReader br = new BufferedReader(new FileReader(fileName));
+            String line= "";
+            while((line = br.readLine())!=null ){
+                String[] parts = line.split("\\|");
+                String name = parts[0];
+                String address = parts [1];
+                String phone = parts [2];
+                dealerships.add(new Dealership(name, address,phone));
+
+
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
         }
         }
     }
