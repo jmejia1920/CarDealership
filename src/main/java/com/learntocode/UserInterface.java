@@ -7,6 +7,11 @@ import static com.learntocode.DealershipFileManager.vehicles;
 public class UserInterface {
     private static int numVehicles = 6;
     private static void display(){
+        System.out.println("Welcome to the dealership.");
+        System.out.println("===================================");
+        System.out.println("1 - Find vehicles within price ");
+
+
        for (Vehicle vehicles: vehicles);
     }
     private static void getByPriceRequest(){
@@ -25,9 +30,10 @@ public class UserInterface {
 
     }
     public static void getByYearRequest(String min, String max){
+        for(Vehicle vehicles:vehicles){
+        }
+        }
 
-
-    }
     private static void getByColorRequest(){
 
     }
